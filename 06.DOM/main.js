@@ -11,3 +11,17 @@ console.log(pDiv);
 
 var email = document.querySelector('input[type=email]');
 console.log(email);
+// var btn = document.getElementsByTagName('button')[0].onclick = function() {
+    console.log('Hey You man');
+//}
+var button = document.getElementsByTagName('button');
+// button.addEventListener('dblclick', function() {
+//     console.log('I am event listenetr');
+// });
+// console.log(button)
+var i=0;
+for(; i<button.length; i++) {
+    button[i].onclick = function(txt) {
+        console.log(this.innerHTML);
+    }
+};
