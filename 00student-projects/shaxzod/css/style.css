@@ -1,0 +1,19 @@
+ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	list-style: none;
+}
+
+ul li {
+	margin: 10px;
+	position: relative;
+}
+
+.numb {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
