@@ -4,11 +4,12 @@ $(document).ready(function() {
     // document.querySelector('#btn');
 
     $('#hide').click(function() {
+        $('h1').slideUp().slideDown();
         // $('h1').toggle(2000);
         // $('h1').fadeOut(2000);
         // $('h1').fadeToggle(2000);
         // $('h1').slideUp(800);
-        $('#myDiv').stop()
+        // $('#myDiv').stop()
     });
     $('#show').click(function() {
         // $('h1').show('slow');
@@ -20,6 +21,18 @@ $(document).ready(function() {
             console.log('finished')
         })
     });
+    $('#hello').click(function() {
+        $('#ul').slideToggle(1000);
+    });
+    $('#click').click(function() {
+        var tag = $('#input').val();
+        console.log(tag)
+        // $('#result').text(value);
+        $('img').attr({
+            src: tag,
+            alt: 'Any Name'
+        })
+    })
     
  
 
