@@ -1,3 +1,27 @@
+/* ==== Messaging app ============ */
+#msg section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#telegramMessage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 750px;
+}
+#left{
+    width: 250px;
+    height: 600px;
+    background: #000;
+}
+#right{
+    width: 500px;
+    height: 600px;
+    background: #fff;
+}
+
 /* ========== Login Page ========= */
 body {
     font-family: sans-serif;

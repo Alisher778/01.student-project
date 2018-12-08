@@ -23,12 +23,12 @@
                         <input type="text" name="full_name" placeholder="Full Name">
                         <input type="text" name="username" placeholder="@username">
                         <input type="number" name="phone" placeholder="99 555 88 77">
-                        <button id="next_btn">Next</button>
+                        <button id="next_btn" onclick="callNext()">Next</button>
                     </div>
                     <div id="next">
-                        <input type="password" name="password" placeholder="Password">
-                        <input type="password" name="repeat_password" placeholder="Repeat Your Password">
-                        <button id="start">Start Messaging</button>
+                        <input type="password" name="password" placeholder="Password" id="myPassword">
+                        <input type="password" name="repeat_password" placeholder="Repeat Your Password" id="repeatMyPassword">
+                        <button id="start" onclick="goMessage()">Start Messaging</button>
                     </div>
                 </form>
             </div>
