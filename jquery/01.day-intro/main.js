@@ -4,7 +4,7 @@ $(document).ready(function() {
     // document.querySelector('#btn');
 
     $('#hide').click(function() {
-        $('h1').slideUp().slideDown();
+        $('h1').empty();
         // $('h1').toggle(2000);
         // $('h1').fadeOut(2000);
         // $('h1').fadeToggle(2000);
@@ -17,21 +17,27 @@ $(document).ready(function() {
         // $('h1').fadeTo(2000,0.3);
         // $('h1').slideDown(800);
 
-        $('#myDiv').animate({height: '120px', width: '100%', background: 'green'}, 2000, function() {
-            console.log('finished')
-        })
+        // $('#myDiv').animate({height: '120px', width: '100%', background: 'green'}, 2000, function() {
+        //     console.log('finished')
+        // })
     });
     $('#hello').click(function() {
         $('#ul').slideToggle(1000);
     });
     $('#click').click(function() {
         var tag = $('#input').val();
-        console.log(tag)
-        // $('#result').text(value);
-        $('img').attr({
-            src: tag,
-            alt: 'Any Name'
-        })
+        var validImg = (tag.includes('.jpg') || tag.includes('.png') || tag.includes('.jpeg'))
+        if(tag && validImg) {
+            var img = '<img src='+tag+' alt="'+tag.slice(window.location.pathname)+'"/>'
+            $('#result').prepend(img);
+            $('#input').val('');
+        } else if(tag && !validImg) {
+            $('#msg').text('Please enter a valid image')
+        } else {
+            $('#msg').text('Please enter an image')
+        }
+       
+        
     })
     
  
