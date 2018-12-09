@@ -39,6 +39,24 @@
     margin-left: 15px;
 }
 .user-info h3, .user-info p{margin: 0; font-size: 90%; padding: 2px;}
+#right{
+    position: relative;
+}
+#messageArea{
+    min-height: 80%;
+    background: #eee;
+    /* position: absolute;
+    bottom: 40px; */
+}
+#sendMsg {
+    width: 40px;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+}
+#sendMsg img{
+    width: 40px;
+}
 
 /* ========== Login Page ========= */
 body {
