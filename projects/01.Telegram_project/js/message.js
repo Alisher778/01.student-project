@@ -31,3 +31,10 @@ function removeUser(id) {
    }
    localStorage.data = JSON.stringify(newLocalstorageData);
 }
+
+function addMsg() {
+    var msgArea = document.getElementById('messageArea');
+    var message = document.querySelector('.emojionearea-editor').innerHTML;
+    console.log(msgArea, message);
+    msgArea.innerHTML += '<p>'+message+'</p><br>';
+}
