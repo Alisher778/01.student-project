@@ -22,6 +22,24 @@
     background: #fff;
 }
 
+#users {
+    margin: 0;
+    padding: 10px;
+}
+#users li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#users li img {
+    width: 50px;
+}
+.user-info {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+.user-info h3, .user-info p{margin: 0; font-size: 90%; padding: 2px;}
+
 /* ========== Login Page ========= */
 body {
     font-family: sans-serif;
