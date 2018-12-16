@@ -1,0 +1,6 @@
+li {
+    display: none;
+}
+li:first-of-type {
+    display: block;
+}
