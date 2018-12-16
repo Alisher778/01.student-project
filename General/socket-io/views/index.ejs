@@ -2,10 +2,24 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <div id="msg">
+
+    </div>
+    <input type="text" id="text"><button>Send</button>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        document.querySelector('button').addEventListener('click', function() {
+          var data = document.getElementById('text').value;
+          socket.emit('send', data);
+        })
+        socket.on('all', function(data) {
+          document.getElementById('msg').innerHTML += '<p>'+data+'</p>';
+        })
+    </script>
   </body>
 </html>
