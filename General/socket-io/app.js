@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var ss = require('socket.io-stream');
+var path = require('path');
+var fs = require('fs');
 
 
 
@@ -12,7 +15,10 @@ io.on('connection', (socket) => {
   socket.on('send', (data) => {
     io.emit('all', data);
   });
-
+  ss(socket).on('image', (stream, data) => {
+    var filename = path.basename(data.name);
+    stream.pipe(fs.createWriteStream(filename))
+  })
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });

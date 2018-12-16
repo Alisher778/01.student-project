@@ -9,8 +9,10 @@
     <div id="msg">
 
     </div>
+    <input type="file" id="img">
     <input type="text" id="text"><button>Send</button>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/javascripts/socket.io-stream.js"></script>
     <script>
         var socket = io();
         document.querySelector('button').addEventListener('click', function() {
@@ -19,7 +21,12 @@
         })
         socket.on('all', function(data) {
           document.getElementById('msg').innerHTML += '<p>'+data+'</p>';
-        })
+        });
+
+        document.getElementById('img').addEventListener('change', function(e) {
+          var file = e.target.files[0];
+          console.log(file)
+        });
     </script>
   </body>
 </html>
