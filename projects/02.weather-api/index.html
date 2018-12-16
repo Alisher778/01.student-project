@@ -8,12 +8,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <select name="" id="tempBtn">
+        <option value="metric">C</option>
+        <option value="imperial">F</option>
+    </select>
+    <h2>Select cities from the list</h2>
+    <select name="" id="cities">
+        <option value="tashkent">Tashkent</option>
+        <option value="jizzakh province">Jizzakh</option>
+        <option value="london">London</option>
+        <option value="new york">New York</option>
+    </select>
     <div id="city">
         <h3 id="cityName"></h3>
+        <img src="" alt="default" id="img">
+        <h5 id="status"></h5>
+        <h6 id="msg"></h5>
         <h5>Temp: <strong id="temp"></strong></h5>
         <h5>Humidty: <strong id="hum"></strong></h5>
         <h5>Wind: <strong id="wind"></strong></h5>
     </div>
+    
     <script src="js/main.js"></script>
 </body>
 </html>
