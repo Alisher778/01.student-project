@@ -10,7 +10,7 @@
 
     </div>
     <input type="file" id="img">
-    <input type="text" id="text"><button>Send</button>
+    <input type="text" id="text" onkeydown="g(this.value)"><button>Send</button>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/public/javascripts/socket.io-stream.js"></script>
     <script>
@@ -19,13 +19,14 @@
           var data = document.getElementById('text').value;
           socket.emit('send', data);
         })
-        socket.on('all', function(data) {
-          document.getElementById('msg').innerHTML += '<p>'+data+'</p>';
-        });
+        
 
-        document.getElementById('img').addEventListener('change', function(e) {
-          var file = e.target.files[0];
-          console.log(file)
+        function g(data) {
+          socket.emit('send', data);
+        };
+        socket.on('all', function(data) {
+          console.log(data)
+          document.getElementById('msg').innerHTML += '<p>'+data+'</p>';
         });
     </script>
   </body>

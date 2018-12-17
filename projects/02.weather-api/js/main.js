@@ -1,7 +1,7 @@
 const APIKEY = "f2f10e4055e1a37e86860d3f10c6f985";
 let unit = 'metric';
 let defaultCity = 'Tashkent';
-let cityUrl = "https://api.openweathermap.org/data/2.5/weather?appid="+APIKEY;
+let cityUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&appid="+APIKEY;
 let icons = "http://openweathermap.org/img/w/"
 
 fetch(cityUrl+"&units="+unit+"&q="+defaultCity)

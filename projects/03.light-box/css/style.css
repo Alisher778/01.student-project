@@ -1,0 +1,31 @@
+#gal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+img{
+    width: 50%;
+}
+
+#modal {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.9);
+    height: 100vh;
+    width: 100vw;
+}
+
+#modal img {flex-grow: 1;}
+#close {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    color: #fff;
+}

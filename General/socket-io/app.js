@@ -11,7 +11,6 @@ var fs = require('fs');
 app.set('view engine', 'ejs');
 
 io.on('connection', (socket) => {
-  console.log(socket);
   socket.on('send', (data) => {
     io.emit('all', data);
   });

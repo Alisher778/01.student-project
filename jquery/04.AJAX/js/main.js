@@ -1,39 +1,12 @@
-$(document).ready(function() {
-    console.time()
-    $.ajax({
-        url: 'https://jsonplaceholder.typicode.com/users',
-        async: false,
-        type: "POST",
-        data: {hello: 'man'},
-        success: function(data) {
-            console.log(data);
-        }, error: function(err) {
-            console.log(err)
-        }
-    });
-    console.timeEnd();
-    
-    
-      async function h() {
-        console.time()
-           await fetch('https://jsonplaceholder.typicode.com/users', {async: false})
-                .then(function(data) {
-                    return data.json();
-                })
-                .then(function(res) {
-                    console.log(res)
-                })
-                .catch(function(err) {
-                    console.log(err)
-                })
-                    
-            console.timeEnd()
-                
-        }
-        
-        h()
 
-    
-    
-        
-});
+const url = "//api.openweathermap.org/data/2.5/forecast?appid=f2f10e4055e1a37e86860d3f10c6f985&q="
+fetch(url+'Tashkent,UZ')
+    .then(function(data) {
+        return data.json();
+    })
+    .then(function(res) {
+        console.log(res)
+    })
+    .catch(function(err) {
+        console.log(err)
+    })
