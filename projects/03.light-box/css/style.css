@@ -8,6 +8,15 @@ img{
     width: 50%;
 }
 
+#gal img:hover {
+    transform: scale(1.2);
+    transform-origin: 40% ;
+    transition: .8s;
+}
+#gal img {
+    transition: .6s;
+}
+
 #modal {
     display: none;
     align-items: center;

@@ -35,6 +35,19 @@ $(document).ready(function() {
             }
         }
 
-    })
+    });
+
+    // $('#gal img').hover(function() {
+    //     var myImg = $(this).attr('src');
+    //     var myImgId = $(this).attr('id');
+    //     function ho() {
+            
+    //          $('#modal img').attr({'src': myImg, id: myImgId});
+    //         $('#modal').css('display', 'flex')
+    //     }
+        
+    //     setTimeout(ho, 400);
+        
+    // });
 
 });
