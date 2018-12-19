@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     $('#close').click(function() {
         $('#modal').fadeOut('fast')
-    })
+    });
 
 
     $('#modal button').click(function() {
