@@ -2,7 +2,6 @@
 // catch == error
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(function(data) {
-        
        return data.json();
     })
     .then(function(res) {
@@ -11,3 +10,4 @@ fetch('https://jsonplaceholder.typicode.com/users')
     .catch(function(err) {
         console.log(err);
     });
+    
