@@ -25,13 +25,33 @@
         firebase.initializeApp(config);
         var db = firebase.firestore();
         db.collection('user').add({
+            id: 'Tim',
             name: 'Alisher',
-            age: 28
+            age: 28,
+            books: [{name: 'Harry', pages: 189}, {name: 'Noer', pages: 234}]
         }).then((data) => {
             db.collection('user').get().then(data => {
                 data.forEach(item => console.log(item.data()))
-            })
+            });
+            var j = db.collection('user').doc('Tim').get();
+            console.log(j);
+            db.collection('user').doc('Tim').set({
+                text: 'Messagae',
+                time: Date.now()
+            }).then(data => console.log(data))
+            .catch(err => console.log(err))
+
         }).catch(err => console.log(err));
+
+        db.collection("cities").doc("LA").set({
+           age: 2000
+        }, {merge: true})
+        .then(function() {
+            console.log("Document successfully written!");
+        })
+        .catch(function(error) {
+            console.error("Error writing document: ", error);
+        });
 
         
     </script>
