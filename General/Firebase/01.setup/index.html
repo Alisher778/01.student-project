@@ -8,6 +8,33 @@
 </head>
 <body>
     
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCdxUyoQpbNnFzgXk5ph19X878V6ghaez8",
+            authDomain: "authentication-00.firebaseapp.com",
+            databaseURL: "https://authentication-00.firebaseio.com",
+            projectId: "authentication-00",
+            storageBucket: "authentication-00.appspot.com",
+            messagingSenderId: "504407331189"
+        };
+        firebase.initializeApp(config);
+        var db = firebase.firestore();
+        db.collection('user').add({
+            name: 'Alisher',
+            age: 28
+        }).then((data) => {
+            db.collection('user').get().then(data => {
+                data.forEach(item => console.log(item.data()))
+            })
+        }).catch(err => console.log(err));
+
+        
+    </script>
     <script src=""></script>
 </body>
 </html>
