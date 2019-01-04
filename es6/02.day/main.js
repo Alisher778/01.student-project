@@ -52,8 +52,10 @@ function cars(name, price, color) {
     console.log(name, price, color)
 }
 cars('dhasghjjf', 'afdfsa')
-
-function cars() {
-    console.log(arguments)
+var g = 999
+function cars(io, li) {
+    console.log(io,li)
 }
+cars(g)
+cars(67,...g)
 cars('dhasghjjf', 'afdfsa', 'fdas', function(){return 2*3})
