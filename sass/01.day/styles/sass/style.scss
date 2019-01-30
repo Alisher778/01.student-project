@@ -1,0 +1,50 @@
+// Variable creation
+$bg: #c3bde9;
+
+
+/*#####################################
+############### GLOBAL ################
+######################################*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background-color: $bg;
+
+    div {
+        display: flex;
+        align-items: center;
+
+        i {
+            margin: 0 5px;
+        }
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+@mixin btn($w, $br, $bc,$c, $p) {
+    width: $w;
+    background-color: $bc;
+    border-radius: $br;
+    color: $c;
+    border: 1px solid $bc;
+    padding: $p;
+}
+
+.small {
+    @include btn(auto, 40px, #ae0fd6, #fcfcfc, 10px 30px);
+    font-size: 30px;
+}
+// HEADER STARTES HERE
+@import '_header.scss';

@@ -1,12 +1,29 @@
 
-const url = "//api.openweathermap.org/data/2.5/forecast?appid=f2f10e4055e1a37e86860d3f10c6f985&q="
-fetch(url+'Tashkent,UZ')
-    .then(function(data) {
-        return data.json();
-    })
-    .then(function(res) {
-        console.log(res)
-    })
-    .catch(function(err) {
-        console.log(err)
-    })
+ var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://api.yelp.com/v3/businesses/vector-moving-scotch-plains/reviews",
+    "method": "GET",
+    "headers": {
+      "Content-Type": "application/json",
+      "cache-control": "no-cache",
+      "Authorization": "VQo5EHk9TXAtuiT9Kk2HUCd3o40orwERq3p-AqKCIolp2GPW431m-nH4u3-BP3vacrThb9NCxxEQhfNxdEuvotUzFia9PiU9nBDEOGORs2rMYYGBuMz3oh0rvDBRXHYx"
+    }
+  }
+    var api = "VQo5EHk9TXAtuiT9Kk2HUCd3o40orwERq3p-AqKCIolp2GPW431m-nH4u3-BP3vacrThb9NCxxEQhfNxdEuvotUzFia9PiU9nBDEOGORs2rMYYGBuMz3oh0rvDBRXHYx";
+    var mainUrl = "https://api.yelp.com/v3/businesses/vector-moving-scotch-plains/reviews"
+    fetch(settings.url, settings.headers)
+        .then(function(data) {
+            return data.json();
+        })
+        .then(function(res) {
+            console.log(res)
+        })
+        .catch(function(err) {
+            console.log(err)
+        })
+       
+          
+          $.ajax(settings).done(function (response) {
+            console.log(11,response);
+          });

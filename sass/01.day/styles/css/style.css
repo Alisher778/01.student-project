@@ -1,0 +1,45 @@
+/*#####################################
+############### GLOBAL ################
+######################################*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #c3bde9;
+}
+nav div {
+  display: flex;
+  align-items: center;
+}
+nav div i {
+  margin: 0 5px;
+}
+nav div:hover {
+  color: #fff;
+}
+
+.small {
+  width: auto;
+  background-color: #ae0fd6;
+  border-radius: 40px;
+  color: #fcfcfc;
+  border: 1px solid #ae0fd6;
+  padding: 10px 30px;
+  font-size: 30px;
+}
+
+header {
+  background: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
