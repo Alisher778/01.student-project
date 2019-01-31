@@ -46,5 +46,29 @@ nav {
     @include btn(auto, 40px, #ae0fd6, #fcfcfc, 10px 30px);
     font-size: 30px;
 }
+
+.btn {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: rgb(239, 233, 240);
+}
+.success {
+    @extend .btn;
+    background-color: #1cda81;
+    border-color: green;
+    color: #fff;
+}
+.danger {
+    @extend .btn;
+    background-color: rgb(216, 78, 28);
+    border-color: rgb(128, 26, 0);
+    color: #fff;
+}
+button {
+    @extend .success;
+}
 // HEADER STARTES HERE
+// Include partials
 @import '_header.scss';

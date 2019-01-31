@@ -38,6 +38,26 @@ nav div:hover {
   font-size: 30px;
 }
 
+.btn, .danger, .success, button {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #efe9f0;
+}
+
+.success, button {
+  background-color: #1cda81;
+  border-color: green;
+  color: #fff;
+}
+
+.danger {
+  background-color: #d84e1c;
+  border-color: #801a00;
+  color: #fff;
+}
+
 header {
   background: blue;
 }
