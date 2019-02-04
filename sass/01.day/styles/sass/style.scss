@@ -34,16 +34,18 @@ nav {
 }
 
 @mixin btn($w, $br, $bc,$c, $p) {
+   
     width: $w;
     background-color: $bc;
     border-radius: $br;
     color: $c;
     border: 1px solid $bc;
     padding: $p;
+    @if $p == 0 {padding: 5px !important;}
 }
 
 .small {
-    @include btn(auto, 40px, #ae0fd6, #fcfcfc, 10px 30px);
+    @include btn(auto, 40px, #ae0fd6, #fcfcfc, 0);
     font-size: 30px;
 }
 
@@ -72,3 +74,43 @@ button {
 // HEADER STARTES HERE
 // Include partials
 @import '_header.scss';
+
+@for $i from 1 through 5 {
+    .display-#{$i} {
+        font-size: #{$i * 14}px;
+    }
+}
+
+@for $i from 1 through 20 {
+    .col-#{$i} {
+        width: #{100% / $i };
+    }
+}
+
+@each $color in dark, danger, success, primary {
+    .#{$color} {
+       @if $color == dark {background-color: black} 
+       @if $color == danger {background-color: red} 
+       @if $color == success {background-color: green} 
+       @if $color == primary {background-color: blue} 
+    }
+}
+// @each $bc, $jk in black, (danger, dhsghdsg), (success), (primary) {
+//     .#{$bc} {
+//        @if $bc == dark {
+//            background-color: black;
+//            color: $c;
+//            padding: #{$p}px;
+//         } 
+//        @if $bc == danger {background-color: red} 
+//        @if $bc == success {background-color: green} 
+//        @if $bc == primary {background-color: blue} 
+//     }
+// }
+$i: 1;
+@while $i < 4 {
+    .col-#{$i*2} {
+        height: #{($i * 2)*100}px;
+    }
+    $i: $i+2;
+}
